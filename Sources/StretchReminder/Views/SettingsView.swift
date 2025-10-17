@@ -64,7 +64,7 @@ struct SettingsView: View {
                 }
 
                 // Current timer setting indicator
-                Text("\(timerManager.currentMinutes) min interval")
+                Text("\(timerManager.isCustomMode ? timerManager.customMinutes : (timerManager.selectedPreset?.rawValue ?? 20)) min interval")
                     .font(.caption)
                     .foregroundColor(.secondary)
                     .padding(.horizontal, 10)
@@ -225,7 +225,7 @@ struct SettingsView: View {
 
             Spacer(minLength: 0)
         }
-        .padding(.bottom, 20)
+        .padding(.bottom, 10)
         .frame(width: 340)
         .background(VisualEffectView())
         .onAppear {

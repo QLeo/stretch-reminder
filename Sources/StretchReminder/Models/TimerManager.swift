@@ -21,6 +21,8 @@ class TimerManager: ObservableObject {
             saveSettings()
             if isRunning {
                 restartTimer()
+            } else {
+                resetTimer()
             }
         }
     }
@@ -30,6 +32,8 @@ class TimerManager: ObservableObject {
             saveSettings()
             if isRunning {
                 restartTimer()
+            } else {
+                resetTimer()
             }
         }
     }
@@ -39,6 +43,8 @@ class TimerManager: ObservableObject {
             saveSettings()
             if isRunning && isCustomMode {
                 restartTimer()
+            } else if isCustomMode {
+                resetTimer()
             }
         }
     }

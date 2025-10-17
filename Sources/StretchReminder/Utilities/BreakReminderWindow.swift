@@ -123,13 +123,7 @@ struct BreakReminderView: View {
                             .font(.system(size: 18, weight: .semibold))
                             .foregroundColor(.white)
                             .frame(width: 120, height: 44)
-                            .background(
-                                LinearGradient(
-                                    gradient: Gradient(colors: [Color.blue, Color.purple]),
-                                    startPoint: .leading,
-                                    endPoint: .trailing
-                                )
-                            )
+                            .background(Color.teal.opacity(0.7))
                             .cornerRadius(22)
                     }
                     .buttonStyle(PlainButtonStyle())
@@ -146,14 +140,7 @@ struct BreakReminderView: View {
                     .fill(Color.black.opacity(0.8))
                     .background(
                         RoundedRectangle(cornerRadius: 30)
-                            .stroke(
-                                LinearGradient(
-                                    gradient: Gradient(colors: [Color.blue.opacity(0.6), Color.purple.opacity(0.6)]),
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                ),
-                                lineWidth: 2
-                            )
+                            .stroke(Color.teal.opacity(0.5), lineWidth: 2)
                     )
             )
             .shadow(color: .black.opacity(0.5), radius: 20, x: 0, y: 10)
