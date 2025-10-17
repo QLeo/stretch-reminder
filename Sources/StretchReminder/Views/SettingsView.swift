@@ -222,11 +222,9 @@ struct SettingsView: View {
                 .buttonStyle(PlainButtonStyle())
             }
             .padding(.horizontal, 20)
-
-            Spacer(minLength: 0)
+            .padding(.bottom, 20)
         }
-        .padding(.bottom, 10)
-        .frame(width: 340)
+        .frame(width: 340, height: 550, alignment: .top)
         .background(VisualEffectView())
         .onAppear {
             customInputText = "\(timerManager.customMinutes)"

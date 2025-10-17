@@ -38,7 +38,7 @@ class TimerManager: ObservableObject {
         }
     }
 
-    @Published var customMinutes: Int = 25 {
+    @Published var customMinutes: Int = 20 {
         didSet {
             saveSettings()
             if isRunning && isCustomMode {

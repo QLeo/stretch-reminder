@@ -63,6 +63,11 @@ class BreakReminderWindow: NSWindow {
         }
     }
 
+    // Allow borderless window to become key window (to receive keyboard events)
+    override var canBecomeKey: Bool {
+        return true
+    }
+
     // Handle ESC key
     override func keyDown(with event: NSEvent) {
         if event.keyCode == 53 { // ESC key
