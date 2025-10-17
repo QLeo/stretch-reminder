@@ -28,7 +28,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
         if let button = statusItem.button {
-            button.image = NSImage(systemSymbolName: "figure.walk", accessibilityDescription: "Stretch Reminder")
+            // Use waving person icon (upper body with hand raised)
+            button.image = NSImage(systemSymbolName: "figure.wave", accessibilityDescription: "Stretch Reminder")
             button.action = #selector(togglePopover)
             button.target = self
         }
@@ -36,7 +37,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func setupPopover() {
         popover = NSPopover()
-        popover.contentSize = NSSize(width: 300, height: 450)
+        popover.contentSize = NSSize(width: 340, height: 540)
         popover.behavior = .transient
         popover.contentViewController = NSHostingController(rootView: SettingsView(timerManager: timerManager))
     }
